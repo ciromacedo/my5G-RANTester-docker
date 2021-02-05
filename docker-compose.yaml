@@ -250,6 +250,8 @@ services:
       context: ./nf_nwdaf
       args:
         DEBUG_TOOLS: "false"
+    expose:
+          - "5003"
     command: go run app.go
     ports:
       - "5003:5003"
