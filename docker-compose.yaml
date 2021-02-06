@@ -53,6 +53,25 @@ services:
     depends_on:
       - db
 
+  free5gc-nwdaf:
+    container_name: nwdaf
+    build:
+      context: ./nf_nwdaf
+      args:
+        DEBUG_TOOLS: "false"
+    command: ./go run app.go
+    expose:
+      - "5001"
+    environment:
+      DB_URI: mongodb://db/free5gc
+      GIN_MODE: release
+    networks:
+      privnet:
+        aliases:
+          - nwdaf.free5gc.org
+    depends_on:
+      - db
+
   free5gc-amf:
     container_name: amf
     build:
