@@ -60,7 +60,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
   	  	
 Running m5GC, Tester with nf_nwdaf:
 ``` 
-git clone https://github.com/my5G/my5G-RANTester-docker.git
+git clone https://github.com/ciromacedo/my5G-RANTester-docker.git
 cd my5G-RANTester-docker
 make base
 docker-compose build
