@@ -59,9 +59,11 @@ services:
       context: ./nf_nwdaf
       args:
         DEBUG_TOOLS: "false"
-    command: ./go run app.go
+    command: go run app.go
     expose:
-      - "5001"
+      - "5003"
+    ports:
+      - "5003:5003"
     environment:
       DB_URI: mongodb://db/free5gc
       GIN_MODE: release
@@ -262,20 +264,6 @@ services:
       - "5000:5000"
     depends_on:
       - db
-
-  free5gc-nwdaf:
-    container_name: nf_nwdaf
-    build:
-      context: ./nf_nwdaf
-      args:
-        DEBUG_TOOLS: "false"
-    expose:
-          - "5003"
-    command: go run app.go
-    ports:
-      - "5003:5003"
-    depends_on:
-      - free5gc-webui
 
 networks:
   privnet:
