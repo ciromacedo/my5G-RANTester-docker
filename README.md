@@ -10,8 +10,12 @@ The following steps demonstrate how to set up the environment on a DigitalOcean 
 Kernel installation for GTP5 support (choose the first option from the boot menu):
 ```
 sudo apt-get install -y linux-image-5.0.0-23-generic
+```
+After install reboot de machine. After reboot install __linux-headers__
+```
 sudo apt-get install -y linux-headers-5.0.0-23-generic
 ```
+
 **make** and **gcc** are required for the build process
 ```
 apt install make
