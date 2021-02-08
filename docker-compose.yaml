@@ -74,6 +74,7 @@ services:
     depends_on:
       - db
 
+      
   free5gc-amf:
     container_name: amf
     build:
