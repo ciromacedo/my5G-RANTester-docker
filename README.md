@@ -77,3 +77,7 @@ sudo docker-compose up -d
 chmod u+x include_ues.sh 
 ./include_ues.sh NUMERO_DE_UES
 ```
+
+## Usage
+
+Check [this link](https://github.com/my5G/my5G-RANTester/wiki/Usage)
